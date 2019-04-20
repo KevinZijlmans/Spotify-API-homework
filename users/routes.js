@@ -10,14 +10,6 @@ const router = new Router()
         password: bcrypt.hashSync(req.body.password, 10),
         password_confirmation: bcrypt.hashSync(req.body.password_confirmation, 10)
     }
-
-    // passwordconf = () => {
-    //   if(password_confirmation !== password)
-    //   res.status(400).send({
-    //     message: 'Passwords do not match'
-    // }
-    // )
-    // else return 
     User
       .create(user)
       .then(user => {
