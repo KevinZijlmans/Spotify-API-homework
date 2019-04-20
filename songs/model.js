@@ -16,7 +16,6 @@ const Song = sequelize.define('songs', {
   album: {
     type: Sequelize.STRING,
     field: 'album',
-    allowNull: false
   },
 }, {
   timestamps: false,
