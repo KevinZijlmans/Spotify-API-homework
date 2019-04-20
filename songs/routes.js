@@ -1,10 +1,12 @@
 const { Router } = require('express')
 const Song = require('./model')
+const Playlist = require('../playlists/model')
 
 const router = new Router()
 
 router.post('playlists/:id/songs', (req, res, next) => {
-  Song
+    Song
+    .findByPk(req.params.id)
     .create(req.body)
     .then(songs => {
       if (!songs) {
