@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const Song = require('./model')
 const Playlist = require('../playlists/model')
-
+// Posting songs should work like this, but I get a 404 don't know why.
 const router = new Router()
 router.get('playlists/:id/songs', (req, res, next) => {
   Song
