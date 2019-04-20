@@ -3,7 +3,7 @@ const User = require('./model')
 const bcrypt = require('bcrypt')
 
 const router = new Router()
-  
+  // I know the password_confirmation doesnt work this way, but I couldnt figure it out.
   router.post('/users', (req, res, next) => {
     const user = {
         email: req.body.email,
